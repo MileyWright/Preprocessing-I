@@ -134,9 +134,19 @@ html,
 body {
   height: 100%;
 }
+.google {
+  font-family: 'IM Fell English', serif;
+}
+.rockfont {
+  font-family: 'Rock Salt', cursive;
+}
 .boardered {
   padding: 20px;
   margin: 10px;
+}
+.flexdisplay {
+  display: flex;
+  flex-direction: row;
 }
 .main-container {
   width: 900px;
@@ -149,10 +159,12 @@ body {
   padding: 40px;
   display: flex;
   justify-content: space-around;
+  background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiQqNCXueDjAhXIdN8KHRHFDtwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.shutterstock.com%2Fvideo%2Fclip-577066-purple-blue-clouds-background&psig=AOvVaw1xRawhVcLmkkdhaGTEu-HE&ust=1564706782605761");
 }
 .main-container nav a {
   padding: 10px;
   text-decoration: none;
+  font-size: 1.3rem;
 }
 .main-container .container1 {
   width: 100%;
@@ -178,13 +190,13 @@ body {
 .main-container .container1 .name-block p span {
   font-size: 4rem;
   line-height: 80px;
+  font-family: 'Rock Salt', cursive;
 }
 .main-container .resume-content {
   display: flex;
   flex-direction: row;
 }
 .main-container .resume-content .container2 {
-  background-color: aquamarine;
   width: 35%;
   height: max-content;
 }
@@ -215,12 +227,16 @@ body {
   font-size: 1.3rem;
   display: flex;
   flex-direction: row;
-  background: white;
   height: max-content;
   flex-wrap: wrap;
 }
 .main-container .resume-content .container2 .skills .boxes-container .boxes {
-  padding: 12px;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .resume-content .container2 .skills .boxes-container .boxes img {
+  width: 100px;
 }
 .main-container .resume-content .container3 {
   background-color: #5c93e3;
@@ -252,9 +268,52 @@ body {
   font-size: 1.1rem;
 }
 .main-container .resume-content .container3 .Work-history .detail .job-title p {
-  padding: 5px;
+  padding: 2px;
   width: max-content;
+}
+.main-container .resume-content .container3 .Work-history .detail .job-title p:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'IM Fell English', serif;
 }
 .main-container .resume-content .container3 .Work-history .detail .description {
   padding: 0 0 0 20px;
+}
+.mobilewidthcontainer {
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .main-container {
+    width: 450px;
+    padding: 20px;
+  }
+  .main-container .container1 {
+    flex-direction: column;
+  }
+  .main-container .container1 .portrait {
+    width: 450px;
+  }
+  .main-container .container1 .name-block {
+    width: 100%;
+    height: max-content;
+    border-bottom: 1.5px dotted black;
+  }
+  .main-container .container1 .name-block p {
+    padding: 0px;
+  }
+  .main-container .resume-content {
+    flex-direction: column-reverse;
+  }
+  .main-container .resume-content .container3 {
+    width: 100%;
+  }
+  .main-container .resume-content .container2 {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .main-container .resume-content .container2 .skills .boxes-container {
+    justify-content: space-around;
+  }
 }
