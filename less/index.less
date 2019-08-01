@@ -54,6 +54,194 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+ @titlesize:2rem;
+ @psize:1.1rem;
+ .google{
+	 font-family: 'IM Fell English', serif;
+ }
+ .rockfont{
+	 font-family:'Rock Salt', cursive;
+ }
+ .boardered{
+	padding:20px;
+	margin:10px;
+ }
+ .flexdisplay{
+	 display:flex;
+	 flex-direction: row;
+ }
+ 
+.main-container{
+	width:900px;
+	margin:0 auto;
+	background-image: url("https://img.freepik.com/free-vector/low-poly-background-purple_1048-8441.jpg?size=338&ext=jpg");
+		nav{
+			
+			margin:0 auto;
+			width:100%;
+			height:100%;
+			padding:40px;
+			display:flex;
+			justify-content: space-around;
+			background-image: url("https://img.freepik.com/free-vector/low-poly-background-purple_1048-8441.jpg?size=338&ext=jpg");
+			a{
+				padding:10px;
+				text-decoration:none;
+				font-size: 1.3rem;
+				color:white;
+			}
+		}
 
+	.container1{
+		background-color: white;
+		width:100%;
+		.flexdisplay();
+		.portrait{
+			width:500px;
+			height:750px;
+		}
+		.name-block{
+			width:50%;
+			height:400px;
+			margin:30px;
+			padding:40px;
+			font-size:@titlesize;
+			display:flex;
+			align-self: center;
+			p{
+			padding:30px 0 0 0;
+				span{
+					font-size: 4rem;
+					line-height: 80px;
+					.rockfont();
+				}
+			}
+		}
+	}
+	.resume-content{
+		.flexdisplay();	
+		.container2{
+			background-color: white;
+			width:35%;
+			height:max-content;
+			.Contacts{
+				.boardered();
+				p{
+					font-size:@titlesize;
+				}
+				.contact-nav{
+					font-size:10px;
+					padding:12px;
+					line-height: 40px;
+					p{
+						font-size:1.3rem;
+					}
+				}
+			}
+			.skills{
+				.boardered();
+				p{
+					font-size:@titlesize;
+				}
+				.boxes-container{
+					padding-top:20px;
+					font-size:1.3rem;
+					.flexdisplay();
+					height: max-content;
+					flex-wrap:wrap;
+					.boxes{
+						padding:9px;
+						display:flex;
+						flex-direction: column;
+						img{
+							width:100px;
+
+						}
+					}
+				}
+			}
+		}
+		.container3{
+			background-color:#5c93e3;
+			width:65%;
+			.About-Me{
+				.boardered();
+				h1{
+					font-size:@titlesize;
+				}
+				p{
+					padding-top:20px;
+					font-size: @psize;
+				}
+			}
+			.Work-history{
+				.boardered();
+				h1{
+					font-size: @titlesize;
+				}
+				.detail{
+				.boardered();
+				.flexdisplay();
+					font-size: @psize;
+					.job-title{
+						p{
+						padding:2px;
+						width:max-content;
+						}
+						p:nth-child(1){
+							font-size: 1.5rem;
+							font-weight: 600;
+							.google();
+						}
+					}
+					.description{
+						padding:0 0 0 20px;
+					}
+				}
+			}
+		}
+	}
+}
+.mobilewidthcontainer{
+	width:100%;
+}
+@media (max-width: 500px){
+	.main-container{
+		width:450px;
+		padding:20px;
+		.container1{
+			flex-direction: column;
+			.portrait{
+				width:400px;
+			}
+			.name-block{
+				.mobilewidthcontainer();
+				height: max-content;
+				border-bottom: 1.5px dotted black;
+				p{
+					padding:0px;
+				}
+			}
+		}
+		.resume-content{
+			flex-direction:column-reverse;
+			.container3{
+				.mobilewidthcontainer();
+				
+			}
+			.container2{
+				.flexdisplay();
+				flex-direction: column-reverse;
+				.mobilewidthcontainer();
+				.skills{
+					.boxes-container{
+						justify-content: space-around;
+					}
+				}
+			}
+		}
+	}
+	
+}
