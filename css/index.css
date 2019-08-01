@@ -151,6 +151,7 @@ body {
 .main-container {
   width: 900px;
   margin: 0 auto;
+  background-image: url("https://img.freepik.com/free-vector/low-poly-background-purple_1048-8441.jpg?size=338&ext=jpg");
 }
 .main-container nav {
   margin: 0 auto;
@@ -159,14 +160,16 @@ body {
   padding: 40px;
   display: flex;
   justify-content: space-around;
-  background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiQqNCXueDjAhXIdN8KHRHFDtwQjRx6BAgBEAU&url=https%3A%2F%2Fwww.shutterstock.com%2Fvideo%2Fclip-577066-purple-blue-clouds-background&psig=AOvVaw1xRawhVcLmkkdhaGTEu-HE&ust=1564706782605761");
+  background-image: url("https://img.freepik.com/free-vector/low-poly-background-purple_1048-8441.jpg?size=338&ext=jpg");
 }
 .main-container nav a {
   padding: 10px;
   text-decoration: none;
   font-size: 1.3rem;
+  color: white;
 }
 .main-container .container1 {
+  background-color: white;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -197,6 +200,7 @@ body {
   flex-direction: row;
 }
 .main-container .resume-content .container2 {
+  background-color: white;
   width: 35%;
   height: max-content;
 }
@@ -291,7 +295,7 @@ body {
     flex-direction: column;
   }
   .main-container .container1 .portrait {
-    width: 450px;
+    width: 400px;
   }
   .main-container .container1 .name-block {
     width: 100%;
